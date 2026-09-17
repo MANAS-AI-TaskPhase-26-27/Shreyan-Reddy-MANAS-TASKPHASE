@@ -1,0 +1,166 @@
+Commit:
+Commit just saves a snapshot of the project you are working in. (it doesn’t upload the project to github). git saves the history of the commits used before and when.
+
+Git Branching:
+These are pointers to the commits. They don’t take up any space.
+“git checkout <name>” switches you to the branch named <name>. When you then run git commit, the new commit is added to that branch instead of main. This allows you to continue developing on the new branch without making commits directly to main.
+Branch= creates the branch
+checkout → switch to the branch
+commit → save your changes on that branch
+
+Git Merge:
+Uses to merge two branches 
+syntax= git merge <name>
+Here the “<name>” branch is merged into the branch we are presently in.
+
+Git Rebase:
+makes your branch look like it was created from the latest main. Moves the branches work to the latest base. 
+ 
+Git Head:
+Shows what we currently have checked out.
+“^” :
+Leads you to the parent head.
+
+“-f”:
+Forces the operation. Be  careful with it as it has the power to discard the data.
+
+Reversing:
+Reset= will move a branch backward as if the commit never happened.
+Revert= reverses changes and shares these reversed changes with others.
+
+Cherry-pick:
+takes one specific commit from another branch and applies it to current branch.
+•	git cherry-pick <Commit1> <Commit2> <...>
+
+-i:
+git will open up a UI to show you which commits are about to be copied below the target of the rebase. It also shows their commit hashes and messages.
+
+ Git add:
+“git add” puts your changes into the staging area, meaning you are telling Git:
+“Include these changes in my next commit.” Advantage of using “add” and then commit is to make the commits more specific.
+
+Undo:
+•	git restore --staged <file>: unstage a file (move it back out of the staging area, keeping your edits)
+•	git restore <file>: discard your edits to a file entirely (careful, this throws the changes away!)
+
+Locally stacked commits:
+Use cherry pick or git rebase -i <name> thingys to do it
+Git Clone:
+Syntax: git clone <link>
+Copy the link from the project on github. Copying it in the terminal will import all the files of the project 
+
+Git switch:
+Makes the branch and shifts you to it. More useful than using commit+checkout
+
+Delete a branch:
+git branch -d <name> deletes it
+
+Git Push:
+git push sends your local commits to the remote repository (GitHub)
+
+git push:
+gets the latest changes from githb and updates my local repository 
+
+git fetch:
+its smiliar to git pull but it doesn’t merge the files yet
+
+git log:
+git log --oneline — view commit history ( in compact way)
+git log - gives Full commit history in expanded form
+
+Git Stash:
+git stash - saves changes temporarily allowing u to work on something else and come back at the same point.
+
+Git Ignore:
+.gitignore – empty folder - to avoid tracking the files present in this folder.
+Username:
+git config --global user.name "NAME" — set your Git username
+git config --global user.email "EMAIL" — set your Git email
+
+git --version – to check the version
+___________________________________________________________________________________________________
+
+MACHINE LEARNING:
+1.	Supervised learning
+2.	Unsupervised learning
+3.	Reinforcement learning
+4.	Generative AI
+
+1.	Supervised learning:
+It makes predictions after going through data with correct answers. Its of 2 types:
+
+1.	Regression
+Predicts a numeric value like weather precipitation.
+2.	Classification
+Its basically like a true or false type output. Again this has 2 types; binary and multiclass. Binary returns like a true or false whereas multiclass returns a value from a class which contains more than 2 values.
+
+2.	Unsupervised learning:
+It tries to find a pattern from the given input.
+
+3.	Reinforcement learning:
+Reinforcement learning models make predictions by getting rewards or penalties based on actions performed within an environment. Its used to train robots walking around a room.
+
+4.	Generative ai:
+It can basically do anything.
+
+The gradient descent family of algorithms, including stochastic gradient descent (SGD), are the most commonly used optimization algorithms, or learning algorithms, when training neural networks
+
+classification:
+Common classification algorithms are linear classifiers, support vector machines (SVM), decision trees, k-nearest neighbour (KNN),  logistic regression and random forest.
+A neural network is a deep learning architecture that processes training data with layers of nodes that mimic the human brain. Each node is made up of inputs, weights, a bias (or threshold) and an output. If an output value exceeds a preset threshold, the node “fires” or activates, passing data to the next layer in the network. 
+
+Regression:
+Regression algorithms include  linear regression, lasso regression, ridge regression and polynomial regression are three examples of regression algorithms. he output is a continuous value
+
+Ensemble learning:
+Ensemble learning is a machine-learning technique where you combine multiple models to make one better prediction.
+
+Naive Bayes:
+Naive Bayes is a machine-learning algorithm mainly used for classification. It adopts the principle of bayes theorem (presence of one feature doesn’t affect the outcome of the another feature). This technique is often used in text classification, spam identification and recommendation systems. 
+
+Linear regression → predicts a number
+Logistic regression → predicts probability → converts it into a class
+
+Nonlinear regression expresses a relationship between variables through a nonlinear, or curved, line. Nonlinear models can handle complex relationships with many parameters. 
+
+KNN = K-Nearest Neighbors
+The basic idea is:
+If a value is missing, look at the most similar rows and use their values to estimate the missing value.
+used for recommendation engines and image recognition. But as the test dataset grows, the processing time lengthens, making it less appealing for classification tasks. 
+
+random forest:
+Random Forest is an ensemble machine-learning algorithm that combines many decision trees to make a better prediction. Its used for both regression and classification.\
+
+Semi supervised data:
+Semi-supervised learning involves training a model on a small portion of labeled input data along with a larger portion of unlabeled data.
+ Advantages:
+1.	Less reliant on labelling
+2.	Hidden pattern discovery
+3.	More flexible
+
+Self-supervised learning
+Self-supervised learning is when a model creates its own “labels” from the data and learns from them, Instead of a human giving the correct answer.
+Pros:
+1.	Low reliance on labelling
+2.	Efficient
+Cons:
+1.	Computer intensive (requires high computational power)
+2.	Not reliable
+3.	Complex
+
+Reinforcement learning:
+It uses trial and error and reward to teach the model instead of supervised or unsupervised data. Examples- robots, self driving cars.
+Pros:
+Adaptable
+Doesn’t rely on labelling 
+Self correcting
+Cons:
+Its prone to inconsistent results and it might find loopholes in the algorithms to reward itself.
+
+Unsupervised learning:
+Unsupervised learning models are utilized for three main tasks—clustering, association, and dimensionality reduction.
+Clustering
+Clustering is a data mining technique which groups unlabeled data based on their similarities or differences. Clustering algorithms can be categorized into a few types, specifically exclusive, overlapping, hierarchical, and probabilistic.
+Exclusive and Overlapping Clustering:
+Exclusive – one data point can only be in one cluster
+Overlapping- one data can be in multiple clusters
